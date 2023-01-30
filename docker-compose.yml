@@ -1,0 +1,28 @@
+version: '2.4'
+
+services:
+  posewarper:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      DISPLAY: ${DISPLAY}
+      SUPP_FILES: PoseWarper_supp_files
+    network_mode: host
+    privileged: true
+    tty: true
+    runtime: nvidia
+    working_dir: /opt/app/codes
+    command: bash
+    volumes:
+      - ./codes:/opt/app/codes:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ~/.Xauthority:/root/.Xauthority
+      - ${MODEL_FOLDER}:/root/model
+      - ${DATA}:/root/data
+    shm_size: '7gb'
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "10"

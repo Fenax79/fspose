@@ -1,0 +1,10 @@
+**.pyc
+**__pycache__
+temp_data/**
+posewarper_supp_root/**
+**.swp
+.vscode/**
+**/build/**
+lib/**.so
+**egg-info**
+codes/Python**
