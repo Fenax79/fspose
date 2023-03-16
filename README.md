@@ -1,4 +1,4 @@
-# FSPose: A Heterogeneous Framework with Fast and Slow Networks for Human Pose Estimation in Videos (submitted to IEICE-ED)
+# FSPose: A Heterogeneous Framework with Fast and Slow Networks for Human Pose Estimation in Videos (to appear at IEICE Transactions on Information and Systems, Vol.E106-D, No.6, Jun.2023 )
 
 ## License
 FSPose is released under the Apache 2.0 license.
